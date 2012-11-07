@@ -1,0 +1,16 @@
+*.log
+*.pot
+*.pyc
+local_settings.py
+bin
+local
+lib
+include
+share
+*.swp
+.Python
+.installed.cfg
+develop-eggs
+parts
+src/sytycnluug.egg-info
+sytycnluug.db
