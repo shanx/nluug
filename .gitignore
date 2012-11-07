@@ -11,6 +11,7 @@ share
 .Python
 .installed.cfg
 develop-eggs
+eggs
 parts
 src/sytycnluug.egg-info
 sytycnluug.db
