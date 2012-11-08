@@ -11,3 +11,10 @@ class Talk(models.Model):
     def get_absolute_url(self):
         return '/ratezzz/{0}/'.format(self.pk)
 
+
+class Rating(models.Model):
+    talk = models.ForeignKey(Talk)
+    rating = models.PositiveSmallIntegerField()
+
+    def __unicode__(self):
+        return '{0}'.format(self.rating)
