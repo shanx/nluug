@@ -14,7 +14,12 @@ class Talk(models.Model):
 
 class Rating(models.Model):
     talk = models.ForeignKey(Talk)
+    rater_id = models.CharField(max_length=12)
     rating = models.PositiveSmallIntegerField()
 
+    class Meta:
+        # Every rater can only vote once per talk
+        unique_together = ('talk', 'rater_id')
+
     def __unicode__(self):
-        return '{0}'.format(self.rating)
+        return u'{0} by {1}'.format(self.rating, self.rater_id)
