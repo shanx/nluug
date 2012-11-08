@@ -11,3 +11,7 @@ class TalkViewTests(TestCase):
         # The index page of the ratezzz app should exist
         response = self.client.get('/ratezzz/')
         self.assertContains(response, 'My preciousssss...')
+
+    def test_rate_talk(self):
+        # Talk doesn't have a rating
+        self.assertFalse(self.talk.rating_set.exists())
