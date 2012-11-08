@@ -1,4 +1,8 @@
 # Django settings for sytycnluug project.
+import warnings
+import exceptions
+warnings.filterwarnings("ignore", category=exceptions.RuntimeWarning, module='django.db.backends.sqlite3', lineno=50)
+
 import os
 PROJECT_ROOT = os.path.dirname(__file__)
 
