@@ -4,6 +4,7 @@ Presentation for the NLUUG conference on november 8th 2012
 The presentation is a semi-live coding demo that builds part of the app found here: https://github.com/shanx/sytycnluug
 
 The coding is split up by a number of tags for notable changes. These tags are the following:
+
 1. Added basic buildout + gitignore
 2. Added django to buildout
 3. Added project as develop egg
