@@ -15,3 +15,8 @@ class TalkViewTests(TestCase):
     def test_rate_talk(self):
         # Talk doesn't have a rating
         self.assertFalse(self.talk.rating_set.exists())
+
+        # Sending post request to talk at ratezzz/1/ creates a rating for this talk
+        self.client.post('/ratezzz/1/', data={'rating': 5})
+        rating = self.talk.rating_set.get()
+        self.assertEqual(rating.rating, 5)
