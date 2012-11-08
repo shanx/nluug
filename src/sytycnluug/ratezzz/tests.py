@@ -1,4 +1,4 @@
-from django.test import TestCase
+from django.test import TestCase, Client
 
 from .models import Talk
 
@@ -20,3 +20,14 @@ class TalkViewTests(TestCase):
         self.client.post('/ratezzz/1/', data={'rating': 5})
         rating = self.talk.rating_set.get()
         self.assertEqual(rating.rating, 5)
+
+        # Sending another post via same client updates the value
+        self.client.post('/ratezzz/1/', data={'rating': 2})
+        rating = self.talk.rating_set.get()
+        self.assertEqual(rating.rating, 2)
+
+        # Via a different client a new rating should be added instead
+        other_client = Client()
+        other_client.post('/ratezzz/1/', data={'rating': 4})
+        self.assertEqual(self.talk.rating_set.count(), 2)
+
