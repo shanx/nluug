@@ -1,7 +1,9 @@
 Presentation for the NLUUG conference on november 8th 2012
 ==========================================================
 
-The presentation is a semi-live coding demo that builds part of the app found here: https://github.com/shanx/sytycnluug
+This is the semi-live coding demo given at the 'Python: ter leering ende vermaeck' presentation on november 8th 2012
+at the https://www.nluug.nl/ conference on software development by @janjaapdriessen and @shanx. The actual app can
+be found here: https://github.com/shanx/sytycnluug
 
 The coding is split up by a number of tags for notable changes. These tags are the following:
 
@@ -24,3 +26,4 @@ The coding is split up by a number of tags for notable changes. These tags are t
 17. Add test of sending multiple rating for same talk, logic should be that same client updates value while a different client adds a new rating.
 18. Implemented cookie logic. Same client updates rating with multiple posts. New clients add a new rating on post.
 
+The presentation will be voice-overed and put on youtube. That link will be added here too.
